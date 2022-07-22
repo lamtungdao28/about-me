@@ -13,6 +13,7 @@
     --nav-color:#161616;
     --background-icon-color: linear-gradient(45deg,#1c1c1c,#232323,#1c1c1c,#232323);
     --h1-color:#ededed;
+    transition: all 0.3s ease;
 
 }
 * {
@@ -29,6 +30,7 @@ body {
     width: 100%;
     overflow-x: hidden;
     background:var(--primary-color);
+    transition: all 0.3s ease;
 }
 .animate__animated.animate__fadeInUp {
     --animate-duration: 0.5s;
