@@ -64,7 +64,7 @@ const sun = document.querySelector('.sun')
             })
         })
     
-discordIcon.addEventListener('click', () => {navigator.clipboard.writeText('1am#6666').then(() => {
+discordIcon.addEventListener('click', () => {navigator.clipboard.writeText('1am#6977').then(() => {
     copyNoti.style.transform = 'translateY(-10px)';
     copyNoti.style.opacity = '1';
     setTimeout(() => { copyNoti.style.transform = 'translateY(0px)'; copyNoti.style.opacity = '0'; },600)
