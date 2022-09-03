@@ -5,7 +5,10 @@
     --nav-color:rgb(254,254,254);
     --background-icon-color:linear-gradient(45deg,#f8f8f8,#e8e8e8,#f8f8f8,#e8e8e8);
     --h1-color:black;
+   
 }
+
+
 .dark-mode {
     --primary-color:#161616 ;
     --text-color:#a0a0a0;
@@ -13,8 +16,13 @@
     --nav-color:#161616;
     --background-icon-color: linear-gradient(45deg,#1c1c1c,#232323,#1c1c1c,#232323);
     --h1-color:#ededed;
-    transition: all 0.3s ease;
-
+   
+}
+.preload *{
+    --webkit-transition: none !important;
+    --moz-transition: none !important;
+    --ms-transition: none !important;
+    --o-transition: none !important;
 }
 * {
     margin: 0;
@@ -23,14 +31,14 @@
     @import url(./FontsFree-Net-SFProText-Regular.ttf);
     font-family: FontsFree-Net-SFProText-Regular;
     color: #6f6f6f;
-   
+
 }
 body {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
     background:var(--primary-color);
-    transition: all 0.3s ease;
+    
 }
 .animate__animated.animate__fadeInUp {
     --animate-duration: 0.5s;
