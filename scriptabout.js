@@ -63,8 +63,10 @@ const sun = document.querySelector('.sun')
 
             })
         })
-    
-discordIcon.addEventListener('click', () => {navigator.clipboard.writeText('1am#6977').then(() => {
+window.onload = () => {
+    document.body.classList.remove('preload')
+}
+discordIcon.addEventListener('click', () => {navigator.clipboard.writeText('1am#6666').then(() => {
     copyNoti.style.transform = 'translateY(-10px)';
     copyNoti.style.opacity = '1';
     setTimeout(() => { copyNoti.style.transform = 'translateY(0px)'; copyNoti.style.opacity = '0'; },600)
@@ -76,23 +78,42 @@ discordIcon.addEventListener('mouseleave', () => {
     copyNoti.style.opacity = '0';
 })
 darkModeBtn.forEach((btn) => {
+    
     btn.addEventListener('click', () => {
+        let theme 
         if (document.body.classList.contains('dark-mode')) {
             moon.classList.remove('active')
             sun.classList.add('active')
+            theme = 'light'
         }
         else {
+            theme = 'dark'
             moon.classList.add('active')
             sun.classList.remove('active')
         }
+        localStorage.setItem('themeUser', JSON.stringify(theme))
         document.body.classList.toggle('dark-mode')
-        
-       }
+
+    }
+    
     )
 })
+let getTheme = JSON.parse(localStorage.getItem('themeUser'))
+if (getTheme == 'dark') {
+
+    document.body.classList.add('dark-mode')
+}
+else {
+    document.body.classList.remove('dark-mode')
+}
 
 
-    
+
+
+
+
+
+
 
 
 
