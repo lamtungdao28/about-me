@@ -1,5 +1,3 @@
-
-
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 const button = document.querySelector('.send-btn');
@@ -49,7 +47,7 @@ const sun = document.querySelector('.sun')
 
             section.classList.add('active')
             section.classList.add('animate__animated')
-            section.classList.add('animate__fadeInUp')
+            section.classList.add('animate__fadeIn')
             circle.classList.add('active')
 
             
@@ -71,7 +69,7 @@ discordIcon.addEventListener('click', () => {navigator.clipboard.writeText('1am#
     copyNoti.style.opacity = '1';
     setTimeout(() => { copyNoti.style.transform = 'translateY(0px)'; copyNoti.style.opacity = '0'; },600)
     
- })
+})
 }) 
 discordIcon.addEventListener('mouseleave', () => {
     copyNoti.style.transform = 'translateY(0px)';
@@ -102,19 +100,12 @@ let getTheme = JSON.parse(localStorage.getItem('themeUser'))
 if (getTheme == 'dark') {
 
     document.body.classList.add('dark-mode')
+    moon.classList.add('active')
+    sun.classList.remove('active')
+
 }
 else {
     document.body.classList.remove('dark-mode')
+    moon.classList.remove('active')
+    sun.classList.add('active')
 }
-
-
-
-
-
-
-
-
-
-
-
-
